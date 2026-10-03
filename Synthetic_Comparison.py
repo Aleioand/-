@@ -6,19 +6,12 @@ Synthetic Validation: DI vs PMIME  (ΝΟΥΜΕΡΑ + ΣΧΗΜΑΤΑ σε ένα)
 Boolean δομής (Εξ. 19 του Li et al. 2022), όπου μόνο οι σειρές
 c0, c1, c2 προκαλούν την ανταμοιβή R (ground truth γνωστό).
 
-ΣΚΟΠΟΣ (validation): να πιστοποιηθεί ότι (α) η υλοποίηση της PMIME
-δουλεύει σωστά και (β) είναι έγκυρο μέτρο σύγκρισης με τη DI, αφού
-και οι δύο εντοπίζουν τις αιτιακές σειρές σε ελεγχόμενο περιβάλλον.
-
-ΤΙ ΚΑΝΕΙ (με μία εντολή `python synthetic_all.py`):
+`python synthetic_all.py`):
   1. Τρέχει N_RUNS επαναλήψεις, εκτυπώνει πίνακα ανά run + σύνοψη.
   2. Αποθηκεύει δύο σχήματα (PNG + PDF) στο στυλ του paper:
        - fig_synthetic_heatmaps : vector heatmaps (κίτρινο-μπλε) DI/PMIME
        - fig_synthetic_bars     : grouped bars με ground-truth highlight
   3. Αποθηκεύει synthetic_results.csv με τα σκορ κάθε run.
-
-ΑΠΑΙΤΕΙ στον ίδιο φάκελο (τα έχεις ήδη):
-  DI_func.py, PMIMEsigClass.py, helpers.py, simulation_systems.py
 """
 
 import numpy as np
